@@ -1,0 +1,43 @@
+{
+  "name": "playwright_mcp_mvp",
+  "version": "1.0.0",
+  "description": "Playwright MVP for Model Context Protocol (MCP) evaluation flow test automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test --project=api-tests",
+    "test:ui": "playwright test --project=chromium-ui",
+    "test:ui:all": "playwright test tests/ui",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "start:mock-server": "node mock-server/server.js",
+    "build": "tsc",
+    "lint": "echo 'Linting not configured yet'",
+    "clean": "rm -rf test-results playwright-report dist"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "mcp",
+    "model-context-protocol",
+    "api-testing",
+    "ui-testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
+    "dotenv": "^16.4.7",
+    "playwright": "^1.49.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
