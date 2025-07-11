@@ -76,7 +76,8 @@ def execute_test():
         }
         
         # Execute test synchronously for direct API calls
-        result = test_executor.execute_test(test_request)
+        import asyncio
+        result = asyncio.run(test_executor.execute_test(test_request))
         
         return jsonify(result)
         

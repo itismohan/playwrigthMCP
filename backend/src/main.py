@@ -3,7 +3,7 @@ import sys
 # DON'T CHANGE THIS !!!
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from Flask import Flask, send_from_directory
+from flask import Flask, send_from_directory
 from flask_socketio import SocketIO
 from flask_cors import CORS
 from src.models.user import db
@@ -56,4 +56,4 @@ def health_check():
     return {'status': 'healthy', 'service': 'Playwright-MCP Server'}
 
 if __name__ == '__main__':
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True)
+    socketio.run(app, host='0.0.0.0', port=4000, debug=True)

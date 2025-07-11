@@ -29,9 +29,9 @@ class EnhancedTestExecutor:
         thread.start()
         self.running_tests[test_id] = thread
     
-    def execute_test(self, test_request: Dict[str, Any]) -> Dict[str, Any]:
-        """Execute test synchronously"""
-        return asyncio.run(self._execute_test_async(test_request))
+    async def execute_test(self, test_request: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute test asynchronously"""
+        return await self._execute_test_async(test_request)
     
     def _run_async_test(self, test_request: Dict[str, Any]):
         """Run test in async context"""

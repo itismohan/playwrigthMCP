@@ -1,8 +1,8 @@
-import ChatInterface from './components/ChatInterface'
+import FixedChatInterface from './components/FixedChatInterface'
 import './App.css'
 
 function App() {
-  return <ChatInterface />
+  return <FixedChatInterface />
 }
 
 export default App
